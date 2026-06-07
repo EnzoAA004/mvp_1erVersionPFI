@@ -18,10 +18,13 @@ export function AppLayout({ activeStep, onStepChange, children }: AppLayoutProps
           <div className="brand-mark">LA</div>
           <div>
             <strong>Lumbar Assist MVP</strong>
-            <span>Validación académica simulada</span>
+            <span>Workstation simulada</span>
           </div>
         </div>
         <StepNavigation activeStep={activeStep} onStepChange={onStepChange} />
+        <div className="side-note">
+          Entorno mockeado para entrevistas de User Research. Los resultados son ficticios y sirven para validar el flujo de uso.
+        </div>
       </aside>
       <main className="main">
         <header className="topbar">
@@ -29,7 +32,7 @@ export function AppLayout({ activeStep, onStepChange, children }: AppLayoutProps
             <p className="eyebrow">Herramienta asistiva simulada</p>
             <h1>{active?.title ?? "Lumbar Assist MVP"}</h1>
           </div>
-          <div className="status-pill">No apta para uso clínico</div>
+          <div className="status-pill">Demo académica</div>
         </header>
         {children}
       </main>
