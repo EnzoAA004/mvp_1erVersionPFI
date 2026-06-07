@@ -9,20 +9,22 @@ export function StudyUpload({ study, onProcess }: StudyUploadProps) {
   return (
     <section className="content-grid two">
       <div className="panel">
-        <h2>Carga de estudio</h2>
+        <p className="eyebrow">Entrada del sistema</p>
+        <h2>Carga de estudio simulado</h2>
         <p className="muted">
-          No se requiere un archivo real. El prototipo utiliza un estudio anonimizado ficticio para simular el flujo.
+          Para entrevistas no se necesita cargar un archivo real. La demo utiliza un caso ficticio para mostrar cómo sería el ingreso de una RM lumbar anonimizada.
         </p>
         <div className="drop-zone">
           <span className="drop-icon">+</span>
-          <strong>Cargar estudio</strong>
-          <p>{study.fileName}</p>
+          <strong>{study.fileName}</strong>
+          <p>Arrastrar estudio o usar caso simulado</p>
         </div>
         <button className="primary-button" onClick={onProcess} type="button">
-          Procesar estudio
+          Procesar estudio simulado
         </button>
       </div>
       <div className="panel">
+        <p className="eyebrow">Ficha del caso</p>
         <h2>Metadatos ficticios</h2>
         <dl className="metadata">
           <div><dt>ID</dt><dd>{study.id}</dd></div>
